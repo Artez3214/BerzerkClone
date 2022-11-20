@@ -49,6 +49,7 @@ public class Main {
             instructions.bulletCollides(map,level,botLevel,bullets, player);
         }
         instructions.playerCollides(botLevel,player);
+        moveBots(botLevel,map,level);
         renderer.renderMap(map,level,player,botLevel);
 
     }
@@ -72,5 +73,11 @@ public class Main {
         byte userInput = bytes[0];
 
         return userInput;
+    }
+
+    private static void moveBots(List<Bot> bots, Map map, int level){
+        for (Bot bot: bots){
+            bot.moveObject(map,level);
+        }
     }
 }

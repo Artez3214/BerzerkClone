@@ -46,4 +46,20 @@ public abstract class Entity {
     public void setDy(int dy) {
         this.dy = dy;
     }
+
+    public void moveObject(Map maps, int level){
+        if(dy == 1 && dx ==0){
+            y += 1;
+        }
+        else if(dy ==-1 && dx == 0){
+            y -= 1;
+        }
+        else if(dy ==0 && dx == 1 ){
+            x+=1;
+        }
+        else if(dy ==0 && dx == -1){
+
+            x-=1;
+        }
+    }
 }

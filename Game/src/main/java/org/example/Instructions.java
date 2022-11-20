@@ -75,18 +75,7 @@ public class Instructions implements GameRule{
        maps = map.getMapLevel(level);
         for (Bullet bullet: bullets){
             maps[bullet.getY()][bullet.getX()] = 0;
-            if(bullet.getDy() == 1 && bullet.getDx() ==0){
-                bullet.setY(bullet.getY()+1);
-            }
-            else if(bullet.getDy() == -1 && bullet.getDx() ==0){
-                bullet.setY(bullet.getY()-1);
-            }
-            else if(bullet.getDy() == 0 && bullet.getDx() ==1){
-                bullet.setX(bullet.getX()+1);
-            }
-            else if(bullet.getDy() == 0 && bullet.getDx() ==-1){
-                bullet.setX(bullet.getX()-1);
-            }
+            bullet.moveObject(map, level);
             maps[bullet.getY()][bullet.getX()] = 2;
             map.setMapLevel(maps,level);
         }

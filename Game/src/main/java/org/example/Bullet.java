@@ -1,7 +1,7 @@
 package org.example;
 
 public class Bullet extends Entity{
-
+    
     public Bullet(int x, int y, int dx, int dy,Map maps,int level) {
         super(x, y, dx, dy);
         int[][] map;
