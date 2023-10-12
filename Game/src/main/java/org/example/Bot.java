@@ -4,7 +4,7 @@ public final class Bot extends Entity{
     public Bot(int x, int y, int dx, int dy) {
         super(x, y, dx, dy);
     }
-
+    // This methods moves main character
     @Override
     public void moveObject(Map maps, int level){
         int min = 1;

@@ -33,7 +33,7 @@ public class Instructions implements GameRule{
     public void setBulletIsFlying(boolean bulletIsFlying) {
         this.bulletIsFlying = bulletIsFlying;
     }
-
+    // it reads users input
     public void processUserInput(int userInput, Player player, Map maps, int level) {
         switch(userInput) {
             case 'q':
@@ -68,7 +68,7 @@ public class Instructions implements GameRule{
                 break;
         }
     }
-
+    //this method moves bullet
     @Override
     public void moveBullet(Map map, int level){
        int[][] maps;
@@ -80,6 +80,8 @@ public class Instructions implements GameRule{
             map.setMapLevel(maps,level);
         }
     }
+    //this method calculates if bullet collides with bot
+    //or with wall
     @Override
     public void bulletCollides(Map map, int level, List<Bot>bots, List<Bullet>bullets, Player player){
         int[][] matrix = map.getMapLevel(level);
